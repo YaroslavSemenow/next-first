@@ -12,7 +12,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-    title: "Next Base App",
+    title: "Learning Next.js",
     description: "Next.js pet project",
 };
 
