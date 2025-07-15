@@ -16,7 +16,7 @@ export const ThemeProvider = ({children}: {children: ReactNode}) => {
     }, []);
 
     useEffect(() => {
-        localStorage.setItem("mode", mode);
+        localStorage.setItem("theme", mode);
     }, [mode]);
 
 
