@@ -1,7 +1,10 @@
-function Dashboard() {
-  return (
-    <div>Dashboard</div>
-  )
-}
+import DashboardClient from "@/app/dashboard/DashboardClient";
 
-export default Dashboard
+export const metadata = {
+    title: "Dashboard Page",
+    description: "This is Dashboard Page",
+};
+
+export default function Dashboard() {
+    return <DashboardClient />;
+}

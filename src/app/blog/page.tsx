@@ -15,6 +15,11 @@ async function getData(): Promise<Post[]> {
     return await res.json();
 }
 
+export const metadata = {
+    title: "Blog Information",
+    description: "This is Blog Page",
+};
+
 const Blog = async () => {
     const data = await getData();
 
