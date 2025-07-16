@@ -5,6 +5,7 @@ import Footer from "../components/footer/Footer";
 import React from "react";
 import {Roboto} from "next/font/google";
 import {ThemeProvider} from "@/context/ThemeContext/ThemeContext";
+import AuthProvider from "@/components/AuthProvider/AuthProvider";
 
 const roboto = Roboto({
     variable: "--font-roboto",
@@ -21,11 +22,13 @@ export default function RootLayout({children}: Readonly<{ children: React.ReactN
         <html lang="en">
         <body className={`${roboto.variable} antialiased`}>
         <ThemeProvider>
-            <div className="container">
-                <Navbar/>
-                {children}
-                <Footer/>
-            </div>
+            <AuthProvider>
+                <div className="container">
+                    <Navbar/>
+                    {children}
+                    <Footer/>
+                </div>
+            </AuthProvider>
         </ThemeProvider>
         </body>
         </html>
