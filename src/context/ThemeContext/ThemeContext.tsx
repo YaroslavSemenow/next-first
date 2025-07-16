@@ -4,7 +4,10 @@ import {createContext, ReactNode, useContext, useEffect, useState} from "react";
 import {ThemeContextInterface, ThemeType} from "@/context/ThemeContext/types";
 
 
-const ThemeContext = createContext<ThemeContextInterface>({});
+const ThemeContext = createContext<ThemeContextInterface>({
+    mode: "light",
+    toggle: () => {},
+});
 
 export const ThemeProvider = ({children}: {children: ReactNode}) => {
     const [mode, setMode] = useState<ThemeType>("dark");
